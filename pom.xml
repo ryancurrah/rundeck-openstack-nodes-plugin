@@ -2,11 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.dtolabs.rundeck.plugin.resources</groupId>
   <artifactId>openstack-nodes-plugin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-RELEASE</version>
   <name>Rundeck OpenStack Resource Plugin</name>
   <description>A rundeck resource plugin that queries an OpenStack environment to list its nodes.</description>  
   <properties>
-    <jcloud.version>1.5.7</jcloud.version>
+    <jcloud.version>1.7.3</jcloud.version>
   </properties>
   <build>
     <plugins>      
@@ -23,7 +23,7 @@
 		            <Rundeck-Plugin-File-Version>${project.version}</Rundeck-Plugin-File-Version>
 		            <Rundeck-Plugin-Archive>true</Rundeck-Plugin-Archive>
 		            <Rundeck-Plugin-Classnames>com.dtolabs.rundeck.plugin.resources.openstack.OpenStackResourceModelSourceFactory</Rundeck-Plugin-Classnames>
-		            <Rundeck-Plugin-Libs>lib/openstack-nova-1.5.7.jar lib/openstack-keystone-1.5.7.jar lib/jclouds-core-1.5.7.jar lib/bcprov-jdk16-1.46.jar lib/jsr311-api-1.1.1.jar lib/guice-assistedinject-3.0.jar lib/guice-3.0.jar lib/javax.inject-1.jar lib/aopalliance-1.0.jar lib/rocoto-6.1.jar lib/jsr250-api-1.0.jar lib/gson-2.2.jar lib/guava-13.0.jar lib/jclouds-compute-1.5.7.jar lib/jclouds-scriptbuilder-1.5.7.jar</Rundeck-Plugin-Libs>
+		            <Rundeck-Plugin-Libs>lib/openstack-nova-1.7.3.jar lib/openstack-keystone-1.7.3.jar lib/jclouds-core-1.7.3.jar lib/bcprov-jdk16-1.46.jar lib/jsr311-api-1.1.1.jar lib/guice-assistedinject-3.0.jar lib/guice-3.0.jar lib/javax.inject-1.jar lib/aopalliance-1.0.jar lib/rocoto-6.2.jar lib/jsr250-api-1.0.jar lib/gson-2.2.4.jar lib/guava-15.0.jar lib/jclouds-compute-1.7.3.jar lib/jclouds-scriptbuilder-1.7.3.jar</Rundeck-Plugin-Libs>
                 </manifestEntries>
             </archive>
         </configuration>
@@ -43,13 +43,13 @@
     <dependency>
         <groupId>org.rundeck</groupId>
         <artifactId>rundeck-core</artifactId>
-        <version>1.5</version>
-        <scope>provided</scope>
+        <version>2.4.2</version>
+        <scope>compile</scope>
     </dependency>
     
     <!-- JCloud -->
     <dependency>
-        <groupId>org.jclouds.api</groupId>
+        <groupId>org.apache.jclouds.api</groupId>
         <artifactId>openstack-nova</artifactId>
         <version>${jcloud.version}</version>
     </dependency>       
